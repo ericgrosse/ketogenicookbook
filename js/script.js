@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
 
 var $animatedIcons = $(); // Add classnames here
 var $window = $(window);
@@ -27,4 +27,4 @@ function checkIfInView() {
 $window.on('scroll resize', checkIfInView);
 $window.trigger('scroll'); // trigger the scroll event as soon as the DOM is ready
 
-});
+});*/
