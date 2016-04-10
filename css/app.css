@@ -54,20 +54,20 @@ button {
   font-weight: bold;
   transition: color 200ms ease, background 200ms ease; }
 
-button.red {
-  border: 3px solid #ff0046;
-  color: #ff0046;
+button.secondary {
+  border: 3px solid #448CFB;
+  color: #448CFB;
   transition: color 400ms ease, background 400ms ease; }
-  button.red:hover {
+  button.secondary:hover {
     color: white;
-    background: #ff0046; }
+    background: #448CFB; }
 
-button.orange, button.case-studies {
-  border: 3px solid #ff9600;
-  color: #ff9600; }
-  button.orange:hover, button.case-studies:hover {
+button.primary, button.case-studies {
+  border: 3px solid #0FBB35;
+  color: #0FBB35; }
+  button.primary:hover, button.case-studies:hover {
     color: white;
-    background: #ff9600; }
+    background: #0FBB35; }
 
 button.case-studies {
   background: black;
@@ -122,15 +122,7 @@ img {
         opacity: 1; }
     .section-1 .header ul {
       float: right;
-      padding-right: 40px;
-      /*a {
-        transition: color 200ms ease-out;
-      }
-
-      a:hover {
-        opacity: 1;
-        color: red;
-      }*/ }
+      padding-right: 40px; }
       .section-1 .header ul li {
         display: inline-block;
         position: relative;
@@ -163,7 +155,7 @@ img {
     .section-1 .text-overlay button {
       background: transparent; }
       .section-1 .text-overlay button:hover {
-        background: #ff9600; }
+        background: #0FBB35; }
 
 .section-2 {
   margin-top: 60px;
@@ -245,6 +237,8 @@ img {
       margin-right: 30px;
       opacity: 0;
       transition: opacity 300ms ease-in-out; }
+      .section-5 .img-overlay p .fa {
+        margin-left: 5px; }
     .section-5 .img-overlay:hover p {
       opacity: 1; }
 
@@ -329,7 +323,7 @@ img {
     .section-8 .image-left:hover .img-overlay, .section-8 .image-right:hover .img-overlay {
       background: rgba(0, 0, 0, 0.7); }
   .section-8 .image-left h2 {
-    color: #30e661; }
+    color: #EAE617; }
   .section-8 .image-left .img-overlay {
     background: rgba(0, 0, 0, 0.3); }
   .section-8 .image-right .img-overlay {

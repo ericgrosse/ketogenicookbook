@@ -69,8 +69,8 @@
  Universal Styles
 */
 
-$red: rgb(255, 0, 70);
-$orange: rgb(255, 150, 0);
+$primary: #0FBB35;
+$secondary: #448CFB;
 
 * {
   box-sizing: border-box;
@@ -130,30 +130,30 @@ button {
   transition: color 200ms ease, background 200ms ease;
 }
 
-button.red {
-  border: 3px solid $red;
-  color: $red;
+button.secondary {
+  border: 3px solid $secondary;
+  color: $secondary;
   transition: color 400ms ease, background 400ms ease;
 
   &:hover {
     color: white;
-    background: $red;
+    background: $secondary;
   }
 }
 
-button.orange {
+button.primary {
   
-  border: 3px solid $orange;
-  color: $orange;
+  border: 3px solid $primary;
+  color: $primary;
 
   &:hover {
     color: white;
-    background: $orange;
+    background: $primary;
   }
 }
 
 button.case-studies {
-  @extend button.orange;
+  @extend button.primary;
   background: black;
   margin-top: 60px;
   margin-bottom: 90px;
@@ -237,15 +237,6 @@ img {
       a:hover {
         opacity: 1;
       }
-
-      /*a {
-        transition: color 200ms ease-out;
-      }
-
-      a:hover {
-        opacity: 1;
-        color: red;
-      }*/
     }
   }
 
@@ -282,7 +273,7 @@ img {
       background: transparent;
 
       &:hover {
-        background: $orange;
+        background: $primary;
       }
     }
   }
@@ -383,6 +374,10 @@ img {
       margin-right: 30px;
       opacity: 0;
       transition: opacity 300ms ease-in-out;
+
+      .fa {
+        margin-left: 5px;
+      }
     }
 
     &:hover {
@@ -490,7 +485,7 @@ img {
   .image-left {
    
     h2 {
-      color: rgb(48, 230, 97);
+      color: #EAE617;
     }
 
     .img-overlay {
