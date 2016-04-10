@@ -193,19 +193,29 @@ img {
 
 .section-1 {
   position: relative;
+  background: #3A2C2C;
 
   .header {
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 2;
+    background: #292424;
     color: white;
     width: 100%;
+
+    span {
+      position: relative;
+    }
 
     .logo {
       display: inline-block;
       font-size: 16px;
       font-weight: bold;
       padding: 20px;
+
+      &:hover {
+        opacity: 1;
+      }
     }
 
     ul {
@@ -214,16 +224,32 @@ img {
 
       li {
         display: inline-block;
-        padding: 20px;
+        position: relative;
+        margin: 20px;
         font-size: 16px;
+        font-weight: bold;
       }
+      
+      a:hover {
+        opacity: 1;
+      }
+
+      /*a {
+        transition: color 200ms ease-out;
+      }
+
+      a:hover {
+        opacity: 1;
+        color: red;
+      }*/
     }
   }
 
+  img {
+    opacity: 0.6;
+  }
+
   .header.scroll-up, .header.scroll-down {
-    position: fixed;
-    z-index: 2;
-    background: #101010;
     transition: transform 500ms;
   }
 
@@ -237,6 +263,7 @@ img {
 
   .text-overlay {
     @include absoluteCenterText();
+    top: 35%;
     z-index: 1;
 
     h1 {
@@ -516,4 +543,99 @@ img {
     margin-top: 120px;
     margin-bottom: 20px;
   }
+}
+
+/**
+ Creative Link Effects Import 
+*/
+
+/* Effect 1 */
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+  display: inline-block;
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-1 a::before {
+  margin-right: 10px;
+  content: '[';
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.cl-effect-1 a::after {
+  margin-left: 10px;
+  content: ']';
+  transform: translateX(-20px);
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+/* Effect 4 */
+
+.cl-effect-4 a {
+  padding: 0 0 10px;
+}
+
+.cl-effect-4 a::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  content: '';
+  opacity: 0;
+  transition: height 0.3s, opacity 0.3s, transform 0.3s;
+  transform: translateY(-10px);
+}
+
+.cl-effect-4 a:hover::after,
+.cl-effect-4 a:focus::after {
+  height: 3px;
+  opacity: 1;
+  transform: translateY(2px);
+}
+
+/* Effect 12 */
+
+$effect12Width: 50px;
+$effect12Height: 50px;
+
+.cl-effect-12 a::before,
+.cl-effect-12 a::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $effect12Width;
+  height: $effect12Height;
+  border: 2px solid rgba(255,255,255,0.6);
+  border-radius: 50%;
+  content: '';
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+  transform: translateX(-50%) translateY(-50%) scale(0.2);
+}
+
+.cl-effect-12 a::after {
+  width: $effect12Width - 10px;
+  height: $effect12Height - 10px;
+  border-width: 6px;
+  transform: translateX(-50%) translateY(-50%) scale(0.8);
+}
+
+.cl-effect-12 a:hover::before,
+.cl-effect-12 a:hover::after,
+.cl-effect-12 a:focus::before,
+.cl-effect-12 a:focus::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-50%) scale(1);
 }
