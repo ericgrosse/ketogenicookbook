@@ -24,6 +24,12 @@
   }
 }
 
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Adjusts font size for our media queries */
 @mixin adjustFontSize($fontSize) {
   font-size: $fontSize;
@@ -42,7 +48,7 @@
   }
 
   .img-overlay {
-    transition: background 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
   }
 
   &:hover {
@@ -55,6 +61,7 @@
 
     .img-overlay {
       background: rgba(0, 0, 0, 0.7);
+      opacity: 1;
     }
   }
 }
@@ -142,6 +149,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+  opacity: 0;
 }
 
 /**
@@ -178,6 +186,24 @@ img {
   margin-top: 150px;
   overflow: hidden;
 
+  .img-overlay {
+    @include flexCenter();
+
+    .text-container {
+      text-align: center;
+      width: 75%;
+
+      h2, p {
+        color: white;
+      }
+
+      h2 {
+        font-size: 35px;
+      }
+    }
+
+  }
+
   &-image-small, &-image-large {
     @include animateOverlayStyles();
     float: left;
@@ -210,44 +236,70 @@ img {
   ul {
 
     li {
-      $padding: 20px;
-
-      width: calc(100% / 3);
+      $margin: 20px;
+      width: calc(100% / 3 - 2 * #{$margin});
       float: left;
-      padding: $padding;
+      margin: $margin;
       @include animateOverlayStyles(false);
 
       .img-overlay {
-        /* Adjust the overlay to account for padding */
-        width: calc(100% - 2 * #{$padding});
-        height: calc(100% - 2 * #{$padding});
-        margin-left: $padding;
-        margin-top: $padding;
+        display: flex;
+        flex-wrap: wrap;
+
+        h2, p {
+          width: 100%;
+          color: white;
+          margin: 0;
+        }
+
+        h2 {
+          align-self: flex-start;
+          text-align: center;
+          font-size: 40px;
+          margin-top: 60px;
+        }
+
+        p {
+          align-self: flex-end;
+          text-align: right;
+          font-size: 16px;
+          margin-bottom: 20px;
+          margin-right: 20px;
+          opacity: 0;
+          transition: opacity 300ms ease-in-out;
+        }
+
+        &:hover {
+          p {
+            opacity: 1;
+          }
+        }
+
       }
     }
   }
 }
 
 .section-6 {
-  $paddingMinor: 10px;
-  $paddingMajor: 20px;
+  $marginMinor: 10px;
+  $marginMajor: 20px;
   margin-top: 60px;
   overflow: hidden;
 
   &-image-left, &-image-right {
-    width: 50%;
+    width: calc(50% - #{$marginMajor} - #{$marginMinor});
     float: left;
     @include animateOverlayStyles();
   }
 
   &-image-left {
-    padding-left: 20px;
-    padding-right: 10px;
+    margin-left: $marginMajor;
+    margin-right: $marginMinor;
   }
 
   &-image-right {
-    padding-left: 10px;
-    padding-right: 20px;
+    margin-left: $marginMinor;
+    margin-right: $marginMajor;
   }
 }
 
@@ -291,6 +343,7 @@ img {
   &-image-left, &-image-right {
     width: 50%;
     float: left;
+    @include animateOverlayStyles();
   }
 }
 

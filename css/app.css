@@ -71,7 +71,8 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  opacity: 0; }
 
 /**
  Page-specific styling
@@ -100,6 +101,17 @@ img {
 .section-3 {
   margin-top: 150px;
   overflow: hidden; }
+  .section-3 .img-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .section-3 .img-overlay .text-container {
+      text-align: center;
+      width: 75%; }
+      .section-3 .img-overlay .text-container h2, .section-3 .img-overlay .text-container p {
+        color: white; }
+      .section-3 .img-overlay .text-container h2 {
+        font-size: 35px; }
   .section-3-image-small, .section-3-image-large {
     position: relative;
     overflow: hidden;
@@ -107,11 +119,12 @@ img {
     .section-3-image-small img, .section-3-image-large img {
       transition: transform 300ms ease-in-out; }
     .section-3-image-small .img-overlay, .section-3-image-large .img-overlay {
-      transition: background 300ms ease-in-out; }
+      transition: all 300ms ease-in-out; }
     .section-3-image-small:hover img, .section-3-image-large:hover img {
       transform: scale(1.04); }
     .section-3-image-small:hover .img-overlay, .section-3-image-large:hover .img-overlay {
-      background: rgba(0, 0, 0, 0.7); }
+      background: rgba(0, 0, 0, 0.7);
+      opacity: 1; }
   .section-3-image-large {
     width: calc(100% * 2 / 3); }
   .section-3-image-small {
@@ -128,44 +141,62 @@ img {
   position: relative;
   top: -40px; }
   .section-5 ul li {
-    width: calc(100% / 3);
+    width: calc(100% / 3 - 2 * 20px);
     float: left;
-    padding: 20px;
+    margin: 20px;
     position: relative;
     overflow: hidden; }
     .section-5 ul li .img-overlay {
-      transition: background 300ms ease-in-out; }
+      transition: all 300ms ease-in-out; }
     .section-5 ul li:hover .img-overlay {
-      background: rgba(0, 0, 0, 0.7); }
+      background: rgba(0, 0, 0, 0.7);
+      opacity: 1; }
     .section-5 ul li .img-overlay {
-      /* Adjust the overlay to account for padding */
-      width: calc(100% - 2 * 20px);
-      height: calc(100% - 2 * 20px);
-      margin-left: 20px;
-      margin-top: 20px; }
+      display: flex;
+      flex-wrap: wrap; }
+      .section-5 ul li .img-overlay h2, .section-5 ul li .img-overlay p {
+        width: 100%;
+        color: white;
+        margin: 0; }
+      .section-5 ul li .img-overlay h2 {
+        align-self: flex-start;
+        text-align: center;
+        font-size: 40px;
+        margin-top: 60px; }
+      .section-5 ul li .img-overlay p {
+        align-self: flex-end;
+        text-align: right;
+        font-size: 16px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        opacity: 0;
+        transition: opacity 300ms ease-in-out; }
+      .section-5 ul li .img-overlay:hover p {
+        opacity: 1; }
 
 .section-6 {
   margin-top: 60px;
   overflow: hidden; }
   .section-6-image-left, .section-6-image-right {
-    width: 50%;
+    width: calc(50% - 20px - 10px);
     float: left;
     position: relative;
     overflow: hidden; }
     .section-6-image-left img, .section-6-image-right img {
       transition: transform 300ms ease-in-out; }
     .section-6-image-left .img-overlay, .section-6-image-right .img-overlay {
-      transition: background 300ms ease-in-out; }
+      transition: all 300ms ease-in-out; }
     .section-6-image-left:hover img, .section-6-image-right:hover img {
       transform: scale(1.04); }
     .section-6-image-left:hover .img-overlay, .section-6-image-right:hover .img-overlay {
-      background: rgba(0, 0, 0, 0.7); }
+      background: rgba(0, 0, 0, 0.7);
+      opacity: 1; }
   .section-6-image-left {
-    padding-left: 20px;
-    padding-right: 10px; }
+    margin-left: 20px;
+    margin-right: 10px; }
   .section-6-image-right {
-    padding-left: 10px;
-    padding-right: 20px; }
+    margin-left: 10px;
+    margin-right: 20px; }
 
 .section-7 {
   margin-top: 25px; }
@@ -192,7 +223,18 @@ img {
   margin-top: 30px; }
   .section-8-image-left, .section-8-image-right {
     width: 50%;
-    float: left; }
+    float: left;
+    position: relative;
+    overflow: hidden; }
+    .section-8-image-left img, .section-8-image-right img {
+      transition: transform 300ms ease-in-out; }
+    .section-8-image-left .img-overlay, .section-8-image-right .img-overlay {
+      transition: all 300ms ease-in-out; }
+    .section-8-image-left:hover img, .section-8-image-right:hover img {
+      transform: scale(1.04); }
+    .section-8-image-left:hover .img-overlay, .section-8-image-right:hover .img-overlay {
+      background: rgba(0, 0, 0, 0.7);
+      opacity: 1; }
 
 .section-9 {
   padding-top: 80px;
