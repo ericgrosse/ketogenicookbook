@@ -102,9 +102,13 @@ p {
   margin-bottom: 60px;
 }
 
-a, a:hover, a:visited {
+a, a:hover, a:focus, a:visited {
   color: inherit;
   text-decoration: none;
+}
+
+a:focus {
+  outline: none;
 }
 
 a {
@@ -534,7 +538,7 @@ img {
 
   .underline {
     text-decoration: none;
-    border-bottom: 1px solid #747474;
+    border-bottom: 2px solid #747474;
     display: inline-block;
   }
 
@@ -598,8 +602,7 @@ img {
   transform: translateY(-10px);
 }
 
-.cl-effect-4 a:hover::after,
-.cl-effect-4 a:focus::after {
+.cl-effect-4 a:hover::after {
   height: 3px;
   opacity: 1;
   transform: translateY(2px);

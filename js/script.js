@@ -103,4 +103,12 @@ $(document).ready(function() {
 			$section6TextRight.removeClass('underline');
 		}
 	);
+
+	/* Scroll to anchor text */
+	var $html_body = $('html, body');
+
+	$("a[href^=#]").click(function(e) { 
+		e.preventDefault(); var dest = $(this).attr('href');
+		$html_body.animate({ scrollTop: $(dest).offset().top }, 'slow');
+	});
 });
