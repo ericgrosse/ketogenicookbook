@@ -78,6 +78,7 @@ $secondary: #448CFB;
 
 body {
   color: rgb(16, 16, 16);
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -213,7 +214,7 @@ img {
 
     .logo {
       display: inline-block;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: bold;
       padding: 20px;
 
@@ -230,7 +231,7 @@ img {
         display: inline-block;
         position: relative;
         margin: 20px;
-        font-size: 16px;
+        font-size: 18px;
         font-weight: bold;
       }
       

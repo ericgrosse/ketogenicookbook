@@ -11,7 +11,8 @@
   box-sizing: border-box; }
 
 body {
-  color: #101010; }
+  color: #101010;
+  font-family: 'Source Sans Pro', sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold; }
@@ -115,7 +116,7 @@ img {
       position: relative; }
     .section-1 .header .logo {
       display: inline-block;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: bold;
       padding: 20px; }
       .section-1 .header .logo:hover {
@@ -127,7 +128,7 @@ img {
         display: inline-block;
         position: relative;
         margin: 20px;
-        font-size: 16px;
+        font-size: 18px;
         font-weight: bold; }
       .section-1 .header ul a:hover {
         opacity: 1; }
