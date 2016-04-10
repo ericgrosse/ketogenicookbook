@@ -140,6 +140,8 @@ img {
         font-weight: bold; }
       .section-1 .header ul a:hover {
         opacity: 1; }
+    .section-1 .header .menu-icon {
+      display: none; }
   .section-1 img {
     opacity: 0.6; }
   .section-1 .header.scroll-up, .section-1 .header.scroll-down {
@@ -412,6 +414,52 @@ img {
     margin-right: 15px; }
   .section-8 h2 {
     font-size: 40px; } }
+
+@media (max-width: 768px) {
+  button.case-studies {
+    margin-bottom: 120px; }
+  .section-1 .header {
+    position: absolute; }
+    .section-1 .header span {
+      display: none; }
+    .section-1 .header ul {
+      display: none; }
+    .section-1 .header .menu-icon {
+      display: block;
+      float: right;
+      margin: 20px; }
+  .section-2 h1 {
+    font-size: 30px;
+    margin-bottom: 50px; }
+  .section-2 p {
+    font-size: 18px; }
+  .section-3 {
+    margin-top: 80px; }
+  .section-3 .image-small, .section-3 .image-large {
+    width: 100%; }
+  .section-4 h2 {
+    font-size: 30px;
+    margin-top: 30px; }
+  .section-5 li {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2px; }
+  .section-6 .image-left, .section-6 .image-right {
+    width: 100%;
+    margin: 0; }
+  .section-6 .content-left, .section-6 .content-right {
+    width: 100%; }
+  .section-6 p {
+    margin-bottom: 30px; }
+  .section-6 {
+    margin-bottom: 10px; }
+  .section-8 .image-left, .section-8 .image-right {
+    width: 100%; }
+  .section-9 {
+    padding-top: 30px;
+    text-align: center; }
+  .section-9 .copyright {
+    margin-top: 60px; } }
 
 /**
  Creative Link Effects Import 
