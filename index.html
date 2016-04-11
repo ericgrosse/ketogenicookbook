@@ -40,7 +40,7 @@
 
         <div class="text-overlay">
           <h1>Ketogenic Cookbook</h1>
-          <button class="primary">Lorem Ipsum</button>
+          <button class="primary" data-toggle="modal" data-target="#myModal">Lorem Ipsum</button>
         </div>
 
         <img class="desktop" src="img/section-1/background2-resized-optimized.jpg" alt=""/>
@@ -53,7 +53,7 @@
         <div class="inner-container">
           <h1>Vivamus Vitae Sapien Nec Purus Semper Tincidunt. Nullam Nunc Mi, Fermentum Eu</h1>
           <p>Proin tincidunt sed enim vitae viverra. Cras tincidunt finibus arcu a varius. Vivamus vitae sapien nec purus semper tincidunt. Nullam nunc mi, fermentum eu suscipit id, tristique a ipsum. Curabitur eu dui euismod.</p>
-          <button class="secondary">Lorem Ipsum</button>
+          <button class="secondary" data-toggle="modal" data-target="#myModal">Lorem Ipsum</button>
         </div>
       </div>
 
@@ -96,7 +96,7 @@
         <div class="container">
           <div class="inner-container">
             <h2 class="alt">Nulla facilisi. Etiam vel fringilla diam. Praesent ullamcorper diam in dui accumsan mollis.</h2>
-            <button class="tertiary">Lorem Ipsum</button>
+            <button class="tertiary" data-toggle="modal" data-target="#myModal">Lorem Ipsum</button>
           </div>
         </div>
       </div>
@@ -247,6 +247,70 @@
         </div>
       </div>
 
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Contact Us</h4>
+            </div>
+            <div class="modal-body">
+
+              <form>
+
+                <div class="row">
+
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Name</label>
+                      <input type="text" class="form-control" id="">
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Company</label>
+                      <input type="text" class="form-control" id="">
+                    </div>                    
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Email</label>
+                      <input type="text" class="form-control" id="">
+                    </div>
+                  </div>
+                  
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Subject</label>
+                      <input type="text" class="form-control" id="">
+                    </div>                    
+                  </div>
+
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Message</label>
+                      <textarea type="text" class="form-control" id=""></textarea>
+                    </div>          
+                  </div>
+
+                </div>
+                
+                <div class="modal-buttons">
+                  <button type="button" class="primary" data-dismiss="modal">Submit</button>
+                  <!--<button type="button" class="secondary">Save changes</button>-->
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <!-- Scripts -->
     <script src="vendor/jquery/dist/jquery.min.js"></script>
     <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="vendor/vivus/dist/vivus.js"></script>

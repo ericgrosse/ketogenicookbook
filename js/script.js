@@ -1,5 +1,13 @@
 $(document).ready(function() {
 
+	/* Handle closing bootstrap modal */
+
+	var $modal = $('.modal');
+
+	$modal.on('hidden.bs.modal', function(){
+	    $(this).find('form')[0].reset();
+	});
+
 	/* Toggle class on menu icon */
 
 	var $menuIcon = $('.menu-icon');
