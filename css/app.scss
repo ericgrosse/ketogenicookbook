@@ -258,7 +258,7 @@ img {
       }
     }
 
-    .menu-icon {
+    .menu-icon-container {
       display: none;
     }
   }
@@ -667,19 +667,39 @@ img {
   .section-1 {
     .header {
       position: absolute;
+      overflow: hidden;
 
       span {
         display: none;
       }
 
       ul {
-        display: none;
+        height: 0;
+        transition: height 450ms ease-in-out;
+        padding-right: 0;
+
+        li {
+          display: block;
+          margin: 15px 25px;
+
+          &:last-child {
+            margin-bottom: 30px;
+          }
+        }
+      }
+
+      ul.expanded {
+        height: 205px;
+      }
+
+      .menu-icon-container {
+        display: block;
+        text-align: right;
       }
 
       .menu-icon {
-        display: block;
-        float: right;
-        margin: 20px;
+        margin: 10px 20px;
+        font-size: 20px;
       }
     }
   }

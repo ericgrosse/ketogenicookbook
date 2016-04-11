@@ -146,7 +146,7 @@ img {
         font-weight: bold; }
       .section-1 .header ul a:hover {
         opacity: 1; }
-    .section-1 .header .menu-icon {
+    .section-1 .header .menu-icon-container {
       display: none; }
   .section-1 img {
     opacity: 0.6; }
@@ -427,15 +427,27 @@ img {
   button.tertiary {
     margin-bottom: 120px; }
   .section-1 .header {
-    position: absolute; }
+    position: absolute;
+    overflow: hidden; }
     .section-1 .header span {
       display: none; }
     .section-1 .header ul {
-      display: none; }
-    .section-1 .header .menu-icon {
+      height: 0;
+      transition: height 450ms ease-in-out;
+      padding-right: 0; }
+      .section-1 .header ul li {
+        display: block;
+        margin: 15px 25px; }
+        .section-1 .header ul li:last-child {
+          margin-bottom: 30px; }
+    .section-1 .header ul.expanded {
+      height: 205px; }
+    .section-1 .header .menu-icon-container {
       display: block;
-      float: right;
-      margin: 20px; }
+      text-align: right; }
+    .section-1 .header .menu-icon {
+      margin: 10px 20px;
+      font-size: 20px; }
   .section-1 .text-overlay {
     width: 80%; }
     .section-1 .text-overlay h1 {

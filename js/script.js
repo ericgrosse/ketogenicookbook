@@ -1,5 +1,14 @@
 $(document).ready(function() {
 
+	/* Toggle class on menu icon */
+
+	var $menuIcon = $('.menu-icon');
+	var $ul = $menuIcon.parent().next();
+
+	$menuIcon.click(function() {
+		$ul.toggleClass('expanded');
+	});
+
 	/* Animate image when scrolling to it */
 
 	var $animatedIcons = $('.section-6'); // Add classnames here
