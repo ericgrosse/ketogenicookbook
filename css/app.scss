@@ -157,7 +157,7 @@ button.primary {
   }
 }
 
-button.case-studies {
+button.tertiary {
   @extend button.primary;
   background: black;
   margin-top: 60px;
@@ -199,6 +199,14 @@ img {
 .inner-container {
   width: 80%;
   margin: 0 auto;
+}
+
+.desktop {
+  display: block;
+}
+
+.mobile, .mobile-small {
+  display: none;
 }
 
 /**
@@ -429,9 +437,12 @@ img {
 
   /* Image Styles */
 
-  .image-left, .image-right {
-    width: calc(50% - #{$marginMajor} - #{$marginMinor});
+  .container-left, .container-right {
+    width: 50%;
     float: left;
+  }
+
+  .image-left, .image-right {
     @include animateOverlayStyles();
   }
 
@@ -463,11 +474,6 @@ img {
 
   p {
     font-size: 20px;
-  }
-
-  .content-left, .content-right {
-    width: 50%;
-    float: left;
   }
 
   .content-left {
@@ -578,7 +584,7 @@ img {
     top: 50%;
 
     h1 {
-      font-size: 8vh;
+      font-size: 7vh;
     }
   }
 
@@ -599,7 +605,7 @@ img {
     top: 55%;
 
     h1 {
-      font-size: 7vh;
+      font-size: 6vh;
     }
   }
 
@@ -646,7 +652,15 @@ img {
 
 @media (max-width: 768px) {
 
-  button.case-studies {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  button.tertiary {
     margin-bottom: 120px;
   }
 
@@ -670,6 +684,14 @@ img {
     }
   }
 
+  .section-1 .text-overlay {
+    width: 80%;
+
+    h1 {
+      font-size: 5vh;
+    }
+  }
+
   .section-2 h1 {
     font-size: 30px;
     margin-bottom: 50px;
@@ -685,6 +707,7 @@ img {
 
   .section-3 .image-small, .section-3 .image-large {
     width: 100%;
+    /*margin-bottom: 2px;*/
   }
 
   .section-4 h2 {
@@ -698,21 +721,48 @@ img {
     margin-bottom: 2px;
   }
 
-  .section-6 .image-left, .section-6 .image-right {
-    width: 100%;
-    margin: 0;
+  .section-5 img {
+    margin: 0 auto;
   }
 
-  .section-6 .content-left, .section-6 .content-right {
+  .section-5 .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .section-5 .img-overlay {
+    display: none;
+  }
+
+  .section-5 h2 {
+    display: none;
+  }
+
+  .section-6 .container-left, .section-6 .container-right {
     width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .section-6 .image-left, .section-6 .image-right {
+    margin: 0;
   }
 
   .section-6 p {
     margin-bottom: 30px;
   }
 
+  .section-6 h1 {
+    font-size: 32px;
+  }
+
   .section-6 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  .section-6 .container {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
   }
 
   .section-8 .image-left, .section-8 .image-right {
@@ -727,6 +777,27 @@ img {
   .section-9 .copyright {
     margin-top: 60px;
   }
+
+  .section-9 .fa {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .mobile-small {
+    display: block;
+  }
+
+  .section-1 .mobile {
+    display: none;
+  }
+
+  .section-1 .text-overlay {
+    top: 35%;
+  }
+
 }
 
 /**

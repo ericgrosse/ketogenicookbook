@@ -66,18 +66,18 @@ button.secondary {
     color: white;
     background: #448CFB; }
 
-button.primary, button.case-studies {
+button.primary, button.tertiary {
   border: 3px solid #0FBB35;
   color: #0FBB35; }
-  button.primary:hover, button.case-studies:hover {
+  button.primary:hover, button.tertiary:hover {
     color: white;
     background: #0FBB35; }
 
-button.case-studies {
+button.tertiary {
   background: black;
   margin-top: 60px;
   margin-bottom: 90px; }
-  button.case-studies:hover {
+  button.tertiary:hover {
     transition: color 400ms ease, background 400ms ease; }
 
 ul {
@@ -105,6 +105,12 @@ img {
 .inner-container {
   width: 80%;
   margin: 0 auto; }
+
+.desktop {
+  display: block; }
+
+.mobile, .mobile-small {
+  display: none; }
 
 /**
  Page-specific styling
@@ -271,9 +277,10 @@ img {
   /* Image Styles */
   /* Content Styles */
   /* Scrolling animation */ }
+  .section-6 .container-left, .section-6 .container-right {
+    width: 50%;
+    float: left; }
   .section-6 .image-left, .section-6 .image-right {
-    width: calc(50% - 20px - 10px);
-    float: left;
     position: relative;
     overflow: hidden; }
     .section-6 .image-left img, .section-6 .image-right img {
@@ -302,9 +309,6 @@ img {
     transition: transform 3000ms; }
   .section-6 p {
     font-size: 20px; }
-  .section-6 .content-left, .section-6 .content-right {
-    width: 50%;
-    float: left; }
   .section-6 .content-left {
     padding-left: 20px;
     padding-right: 10px; }
@@ -380,7 +384,7 @@ img {
   .section-1 .text-overlay {
     top: 50%; }
     .section-1 .text-overlay h1 {
-      font-size: 8vh; }
+      font-size: 7vh; }
   .section-1 button {
     color: white;
     border: 3px solid white; }
@@ -391,7 +395,7 @@ img {
   .section-1 .text-overlay {
     top: 55%; }
     .section-1 .text-overlay h1 {
-      font-size: 7vh; }
+      font-size: 6vh; }
   p {
     font-size: 18px;
     line-height: 24px; }
@@ -416,7 +420,11 @@ img {
     font-size: 40px; } }
 
 @media (max-width: 768px) {
-  button.case-studies {
+  .desktop {
+    display: none; }
+  .mobile {
+    display: block; }
+  button.tertiary {
     margin-bottom: 120px; }
   .section-1 .header {
     position: absolute; }
@@ -428,6 +436,10 @@ img {
       display: block;
       float: right;
       margin: 20px; }
+  .section-1 .text-overlay {
+    width: 80%; }
+    .section-1 .text-overlay h1 {
+      font-size: 5vh; }
   .section-2 h1 {
     font-size: 30px;
     margin-bottom: 50px; }
@@ -436,7 +448,8 @@ img {
   .section-3 {
     margin-top: 80px; }
   .section-3 .image-small, .section-3 .image-large {
-    width: 100%; }
+    width: 100%;
+    /*margin-bottom: 2px;*/ }
   .section-4 h2 {
     font-size: 30px;
     margin-top: 30px; }
@@ -444,22 +457,48 @@ img {
     width: 100%;
     margin: 0;
     margin-bottom: 2px; }
-  .section-6 .image-left, .section-6 .image-right {
+  .section-5 img {
+    margin: 0 auto; }
+  .section-5 .container {
+    padding-left: 0;
+    padding-right: 0; }
+  .section-5 .img-overlay {
+    display: none; }
+  .section-5 h2 {
+    display: none; }
+  .section-6 .container-left, .section-6 .container-right {
     width: 100%;
+    margin-bottom: 60px; }
+  .section-6 .image-left, .section-6 .image-right {
     margin: 0; }
-  .section-6 .content-left, .section-6 .content-right {
-    width: 100%; }
   .section-6 p {
     margin-bottom: 30px; }
+  .section-6 h1 {
+    font-size: 32px; }
   .section-6 {
-    margin-bottom: 10px; }
+    margin-bottom: 20px; }
+  .section-6 .container {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%; }
   .section-8 .image-left, .section-8 .image-right {
     width: 100%; }
   .section-9 {
     padding-top: 30px;
     text-align: center; }
   .section-9 .copyright {
-    margin-top: 60px; } }
+    margin-top: 60px; }
+  .section-9 .fa {
+    padding-left: 4%;
+    padding-right: 4%; } }
+
+@media (max-width: 480px) {
+  .mobile-small {
+    display: block; }
+  .section-1 .mobile {
+    display: none; }
+  .section-1 .text-overlay {
+    top: 35%; } }
 
 /**
  Creative Link Effects Import 
