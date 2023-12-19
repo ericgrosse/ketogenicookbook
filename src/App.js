@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import animate from 'helpers/animate';
-import './App.css';
+import animate from './helpers/animate';
 
 class App extends Component {
   componentDidMount() {
@@ -37,9 +36,9 @@ class App extends Component {
             <button class="primary" data-toggle="modal" data-target="#myModal">Lorem Ipsum</button>
           </div>
 
-          <img class="desktop" src={require('images/section-1/background2-resized-optimized.jpg')}alt=""/>
-          <img class="mobile" src={require('images/section-1/background2-mobile-alt.jpg')}alt=""/>
-          <img class="mobile-small" src={require('images/section-1/background2-mobile-alt3.jpg')} alt=""/>
+          <img class="desktop" src={require('./images/section-1/background2-resized-optimized.jpg')}alt=""/>
+          <img class="mobile" src={require('./images/section-1/background2-mobile-alt.jpg')}alt=""/>
+          <img class="mobile-small" src={require('./images/section-1/background2-mobile-alt3.jpg')} alt=""/>
           <div class="img-overlay"></div>
         </div>
 
@@ -53,8 +52,8 @@ class App extends Component {
 
         <div id="two" class="section-3">
           <div class="image-large">
-            <img class="desktop" src={require('images/section-3/food-1-resized-optimized.jpg')}alt=""/>
-            <img class="mobile" src={require('images/section-3/food-1-mobile.jpg')} alt=""/>
+            <img class="desktop" src={require('./images/section-3/food-1-resized-optimized.jpg')}alt=""/>
+            <img class="mobile" src={require('./images/section-3/food-1-mobile.jpg')} alt=""/>
             <div class="img-overlay">
               <div class="text-container">
                 <h2> Nulla Ut Finibus Justo</h2>
@@ -63,8 +62,8 @@ class App extends Component {
             </div>
           </div>
           <div class="image-small" id="img-1">
-            <img class="desktop" src={require('images/section-3/food-2-resized-optimized.jpg')} alt=""/>
-            <img class="mobile" src={require('images/section-3/food-2-mobile.jpg')} alt=""/>
+            <img class="desktop" src={require('./images/section-3/food-2-resized-optimized.jpg')} alt=""/>
+            <img class="mobile" src={require('./images/section-3/food-2-mobile.jpg')} alt=""/>
             <div class="img-overlay">
               <div class="text-container">
                 <h2>Nam At Pretium Nisi</h2>
@@ -73,8 +72,8 @@ class App extends Component {
             </div>
           </div>
           <div class="image-small" id="img-2">
-            <img class="desktop" src={require('images/section-3/food-3-resized-optimized.jpg')} alt=""/>
-            <img class="mobile" src={require('images/section-3/food-3-mobile.jpg')} alt=""/>
+            <img class="desktop" src={require('./images/section-3/food-3-resized-optimized.jpg')} alt=""/>
+            <img class="mobile" src={require('./images/section-3/food-3-mobile.jpg')} alt=""/>
             <div class="img-overlay">
               <div class="text-container">
                 <h2>Ut Ullamcorper Nisl Feugiat</h2>
@@ -99,21 +98,21 @@ class App extends Component {
           <div class="container">
             <ul>
               <li>
-                <img src={require('images/section-5/food-1-resized-optimized.jpg')} alt=""/>
+                <img src={require('./images/section-5/food-1-resized-optimized.jpg')} alt=""/>
                 <h2>Lorem Ipsum</h2>
                 <div class="img-overlay">
                   <p>Nec Hendrerit <i class="fa fa-chevron-right"></i></p>
                 </div>
               </li>
               <li>
-                <img src={require('images/section-5/food-2-resized-optimized.jpg')} alt=""/>
+                <img src={require('./images/section-5/food-2-resized-optimized.jpg')} alt=""/>
                 <h2>Dolor Amet</h2>
                 <div class="img-overlay">
                   <p>Nec Hendrerit <i class="fa fa-chevron-right"></i></p>
                 </div>
               </li>
               <li>
-                <img src={require('images/section-5/food-3-resized-optimized.jpg')} alt=""/>
+                <img src={require('./images/section-5/food-3-resized-optimized.jpg')} alt=""/>
                 <h2>Suspendisse</h2>
                 <div class="img-overlay">
                   <p>Nec Hendrerit... <i class="fa fa-chevron-right"></i></p>
@@ -121,21 +120,21 @@ class App extends Component {
               </li>
               <div class="clearfix"></div>
               <li>
-                <img src={require('images/section-5/food-4-resized-optimized.jpg')} alt=""/>
+                <img src={require('./images/section-5/food-4-resized-optimized.jpg')} alt=""/>
                 <h2>Porttitor</h2>
                 <div class="img-overlay">
                   <p>Nec Hendrerit <i class="fa fa-chevron-right"></i></p>
                 </div>
               </li>
               <li>
-                <img src={require('images/section-5/food-5-resized-optimized.jpg')} alt=""/>
+                <img src={require('./images/section-5/food-5-resized-optimized.jpg')} alt=""/>
                 <h2>Aenean Dictum</h2>
                 <div class="img-overlay">
                   <p>Nec Hendrerit <i class="fa fa-chevron-right"></i></p>
                 </div>
               </li>
               <li>
-                <img src={require('images/section-5/food-6-resized-optimized.jpg')} alt=""/>
+                <img src={require('./images/section-5/food-6-resized-optimized.jpg')} alt=""/>
                 <h2>Morbi Consectetur</h2>
                 <div class="img-overlay">
                   <p>Nec Hendrerit <i class="fa fa-chevron-right"></i></p>
@@ -151,8 +150,8 @@ class App extends Component {
 
             <div class="container-left">
               <div class="image-left">
-                <img class="desktop" src={require('images/section-6/food-1-resized-optimized.jpg')} alt=""/>
-                <img class="mobile" src={require('images/section-6/food-1-mobile-alt.jpg')} alt=""/>
+                <img class="desktop" src={require('./images/section-6/food-1-resized-optimized.jpg')} alt=""/>
+                <img class="mobile" src={require('./images/section-6/food-1-mobile-alt.jpg')} alt=""/>
                 <div class="img-overlay"></div>
               </div>
 
@@ -165,8 +164,8 @@ class App extends Component {
 
             <div class="container-right">
               <div class="image-right">
-                <img class="desktop" src={require('images/section-6/food-2-resized-optimized.jpg')} alt=""/>
-                <img class="mobile" src={require('images/section-6/food-2-mobile-alt.jpg')} alt=""/>
+                <img class="desktop" src={require('./images/section-6/food-2-resized-optimized.jpg')} alt=""/>
+                <img class="mobile" src={require('./images/section-6/food-2-mobile-alt.jpg')} alt=""/>
                 <div class="img-overlay"></div>
               </div>
 
@@ -188,15 +187,15 @@ class App extends Component {
 
         <div class="section-8">
           <div class="image-left">
-            <img class="desktop" src={require('images/section-8/food-1-resized-optimized.jpg')} alt=""/>
-            <img class="mobile" src={require('images/section-8/food-1-mobile.jpg')} alt=""/>
+            <img class="desktop" src={require('./images/section-8/food-1-resized-optimized.jpg')} alt=""/>
+            <img class="mobile" src={require('./images/section-8/food-1-mobile.jpg')} alt=""/>
             <div class="img-overlay">
               <h2>Gravida Est</h2>
             </div>
           </div>
           <div class="image-right">
-            <img class="desktop" src={require('images/section-8/food-2-resized-optimized.jpg')} alt=""/>
-            <img class="mobile" src={require('images/section-8/food-2-mobile.jpg')} alt=""/>
+            <img class="desktop" src={require('./images/section-8/food-2-resized-optimized.jpg')} alt=""/>
+            <img class="mobile" src={require('./images/section-8/food-2-mobile.jpg')} alt=""/>
             <div class="img-overlay">
               <h2>Vivamus Vitae</h2>
             </div>
@@ -230,10 +229,8 @@ class App extends Component {
                 <p class="underline"><a href="#">Eros Ac Tempor</a></p>
                 <p>Elit</p>
                 <p class="social-media">
-                  <a href="https://www.facebook.com/eric.grosse.9400" class="fa fa-facebook"></a>
-                  <a href="https://twitter.com/eric_grosse" class="fa fa-twitter"></a>
                   <a href="https://github.com/ericgrosse" class="fa fa-github"></a>
-                  <a href="https://www.linkedin.com/in/eric-grosse-485a0894" class="fa fa-linkedin"></a>
+                  <a href="https://www.linkedin.com/in/eric-grosse" class="fa fa-linkedin"></a>
                 </p>
               </div>
             </div>

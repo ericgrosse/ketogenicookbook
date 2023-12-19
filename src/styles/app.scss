@@ -151,7 +151,6 @@ button.secondary {
 }
 
 button.primary {
-  
   border: 3px solid $primary;
   color: $primary;
 
@@ -162,12 +161,15 @@ button.primary {
 }
 
 button.tertiary {
-  @extend button.primary;
+  border: 3px solid $primary;
+  color: $primary;
   background: black;
   margin-top: 60px;
   margin-bottom: 90px;
 
   &:hover {
+    color: white;
+    background: $primary;
     transition: color 400ms ease, background 400ms ease;
   }
 }
